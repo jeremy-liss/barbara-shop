@@ -1,0 +1,33 @@
+body {
+  height: 100%;
+}
+
+body {
+  margin-top: 12%;
+}
+
+
+
+#quartet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barb {
+  width: 150px;
+  height: 150px;
+  /*border: 1px #ccc dotted;*/
+  margin: 10px;
+
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
