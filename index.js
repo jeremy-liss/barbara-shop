@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import App from './App'
+
 const target = document.getElementById('root')
 
-  // const view = App(state)
-ReactDOM.render(<h1>BARBARA SHOP QUARTET</h1>, target)
+ReactDOM.render(<App />, target)
