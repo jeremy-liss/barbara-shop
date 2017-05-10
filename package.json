@@ -25,7 +25,6 @@
     "watchify": "^3.9.0"
   },
   "dependencies": {
-    "react-audio-player": "^0.3.3",
     "react-sound": "^0.5.2"
   }
-}  
+}
