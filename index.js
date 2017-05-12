@@ -4,12 +4,17 @@ import ReactDOM from 'react-dom'
 import state from './state'
 import App from './App'
 
-const playSound = () => {
-  state.sound = !state.sound
-  console.log('sound')
+const playSound = (i) => {
+  state.soundOn[i] = true
+  render()
+}
+const stopSound = (i) => {
+  state.soundOn[i] = false
+  render()
 }
 
 state.playSound = playSound
+state.stopSound = stopSound
 
 const target = document.getElementById('root')
 

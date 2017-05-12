@@ -1,11 +1,10 @@
 import React from 'react'
 import Sound from 'react-sound'
 
-
 const App = (props)=> {
 
-  const triggerSound = ()=> {
-    props.playSound()
+  function getId(ev){
+    props.playSound(ev.target.dataset.id)
   }
 
   return (
@@ -15,15 +14,14 @@ const App = (props)=> {
         {props.images.map((image, i)=>{
           return (
             <div className='barb' key={i}>
-              <img src ={image} onMouseOver={triggerSound}/>
-              {props.sound && <Sound url={props.sounds[i]} playStatus={Sound.status.PLAYING} />}
+              <img src ={image} data-id={i} onMouseOver={getId} />
+              {props.soundOn[i] && <Sound url={props.sounds[i]} playStatus={Sound.status.PLAYING} onFinishedPlaying={()=>props.stopSound(i)}/>}
             </div>
           )
         })}
       </div>
     </div>
   )
-
 }
 
 export default App
