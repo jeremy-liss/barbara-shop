@@ -5,11 +5,11 @@ import state from './state'
 import App from './App'
 
 const playSound = (i) => {
-  state.soundOn[i] = true
+  state.barbaras[i].singing = true
   render()
 }
 const stopSound = (i) => {
-  state.soundOn[i] = false
+  state.barbaras[i].singing = false
   render()
 }
 

@@ -3,19 +3,16 @@ import Sound from 'react-sound'
 
 const App = (props)=> {
 
-  function getId(ev){
-    props.playSound(ev.target.dataset.id)
-  }
-
   return (
     <div>
       <h1>BARBARA SHOP QUARTET</h1>
       <div id="quartet">
-        {props.images.map((image, i)=>{
+        {props.barbaras.map((barbara, i)=>{
           return (
-            <div className='barb' key={i}>
-              <img src ={image} data-id={i} onMouseOver={getId} />
-              {props.soundOn[i] && <Sound url={props.sounds[i]} playStatus={Sound.status.PLAYING} onFinishedPlaying={()=>props.stopSound(i)}/>}
+            <div className='barb' key={i} onMouseOver={()=>props.playSound(i)}>
+              {barbara.singing ? <img src={barbara.open} /> : <img src={barbara.closed} />}
+              {barbara.singing &&
+                <Sound url={barbara.sound} playStatus={Sound.status.PLAYING} onFinishedPlaying={()=>props.stopSound(i)} />}
             </div>
           )
         })}
