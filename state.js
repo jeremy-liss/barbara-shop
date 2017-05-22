@@ -1,5 +1,28 @@
 export default {
-  images: ['../images/barb1.jpg', '../images/barb2.jpg', '../images/barb3.jpg', '../images/barb4.jpg'],
-  sounds: ['../sounds/barb_a.wav', '../sounds/barb_c.wav', '../sounds/barb_f.wav', '../sounds/barb_high_f.wav'],
-  soundOn: [false, false, false, false]
+  barbaras: [
+    {
+      closed: '../images/barb1closed.jpg',
+      open:'../images/barb1open.jpg',
+      sound:'../sounds/barb_a.wav',
+      singing: false
+    },
+    {
+      closed:'../images/barb2closed.jpg',
+      open:'../images/barb2open.jpg',
+      sound:'../sounds/barb_c.wav',
+      singing: false
+    },
+    {
+      closed:'../images/barb3closed.jpg',
+      open:'../images/barb3open.jpg',
+      sound:'../sounds/barb_f.wav',
+      singing: false
+    },
+    {
+      closed:'../images/barb4closed.jpg',
+      open:'../images/barb4open.jpg',
+      sound:'../sounds/barb_high_f.wav',
+      singing: false
+    }
+  ]
 }
